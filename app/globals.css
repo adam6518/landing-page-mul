@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #111111;
+  --paper: #f4f3ef;
+  --accent: #facc15;
+  --muted: #9b9b95;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+::selection { background: var(--accent); color: var(--ink); }
+.display { font-size: clamp(3.5rem, 10vw, 9.5rem); line-height: .86; letter-spacing: -.075em; font-weight: 900; }
+.section-label { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; }
+.placeholder { background: linear-gradient(135deg,#343434,#777 48%,#202020); }
