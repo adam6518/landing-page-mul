@@ -6,10 +6,97 @@
   --accent: #facc15;
   --muted: #9b9b95;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
-::selection { background: var(--accent); color: var(--ink); }
-.display { font-size: clamp(3.5rem, 10vw, 9.5rem); line-height: .86; letter-spacing: -.075em; font-weight: 900; }
-.section-label { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; }
-.placeholder { background: linear-gradient(135deg,#343434,#777 48%,#202020); }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.display {
+  width: 100%;
+  max-width: 100%;
+  font-size: clamp(2.4rem, 5.7vw, 7.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+  font-weight: 900;
+  white-space: normal;
+}
+
+.section-label {
+  font-size: clamp(0.62rem, 0.75vw, 0.75rem);
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.placeholder {
+  background: linear-gradient(135deg, #343434, #777 48%, #202020);
+}
+
+/* Better keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Desktop besar */
+@media (min-width: 1200px) {
+  .display {
+    font-size: clamp(4.5rem, 5.7vw, 7.8rem);
+    letter-spacing: -0.07em;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .display {
+    font-size: clamp(3.2rem, 7vw, 6rem);
+    letter-spacing: -0.06em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .display {
+    font-size: clamp(2rem, 8.5vw, 3.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+  }
+}
+
+/* Mobile kecil */
+@media (max-width: 390px) {
+  .display {
+    font-size: 2rem;
+    letter-spacing: -0.05em;
+  }
+}
