@@ -135,10 +135,6 @@ export default function Projects() {
       ? projects[0]
       : projects.find((project) => project.location === activeLocation);
 
-  /*
-   * Update indicator ketika user melakukan
-   * swipe menggunakan touchpad / touchscreen.
-   */
   const handleScroll = () => {
     if (!sliderRef.current) return;
 
@@ -164,9 +160,6 @@ export default function Projects() {
     setActiveMedia(closestIndex);
   };
 
-  /*
-   * Pindah tepat satu slide.
-   */
   const goToSlide = (index) => {
     if (!sliderRef.current) return;
 
@@ -200,10 +193,6 @@ export default function Projects() {
     goToSlide(previousIndex);
   };
 
-  /*
-   * Ketika lokasi berubah,
-   * kembali ke media pertama.
-   */
   const changeLocation = (location) => {
     setActiveLocation(location);
     setActiveMedia(0);
@@ -218,9 +207,6 @@ export default function Projects() {
     });
   };
 
-  /*
-   * Reset slider ketika project berubah.
-   */
   useEffect(() => {
     setActiveMedia(0);
 
@@ -248,10 +234,13 @@ export default function Projects() {
       "
     >
       <div className="mx-auto max-w-[1600px]">
-        {/* HEADER */}
+        {/* =========================
+            HEADER
+        ========================= */}
+
         <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-end">
           <div>
-            <p className="section-label text-black/50">04 — Projects</p>
+            <p className="section-label text-[#173331]/50">04 — Projects</p>
 
             <h2
               className="
@@ -260,27 +249,31 @@ export default function Projects() {
                 font-black
                 leading-[0.85]
                 tracking-[-0.07em]
+                text-[#173331]
               "
             >
               Hasil Kerja
               <br />
-              <span className="text-yellow-400">Kami.</span>
+              <span className="text-[#8FA68F]">Kami.</span>
             </h2>
           </div>
 
-          <p className="max-w-md text-base leading-relaxed text-black/55">
+          <p className="max-w-md text-base leading-relaxed text-[#173331]/55">
             Berikut adalah hasil nyata dari pekerjaan kami di beberapa lokasi
             project.
           </p>
         </div>
 
-        {/* LOCATION FILTER */}
+        {/* =========================
+            LOCATION FILTER
+        ========================= */}
+
         <div
           className="
             mt-14
             overflow-x-auto
             border-y
-            border-black/15
+            border-[#2F6F6D]/15
             py-4
             [scrollbar-width:none]
             [&::-webkit-scrollbar]:hidden
@@ -306,8 +299,8 @@ export default function Projects() {
                     transition-all
                     ${
                       isActive
-                        ? "bg-black text-white"
-                        : "text-black/45 hover:bg-black/10 hover:text-black"
+                        ? "bg-[#2F6F6D] text-white"
+                        : "text-[#173331]/45 hover:bg-[#8FA68F]/25 hover:text-[#173331]"
                     }
                   `}
                 >
@@ -318,7 +311,10 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* PROJECT MEDIA */}
+        {/* =========================
+            PROJECT MEDIA
+        ========================= */}
+
         <div className="mt-10">
           <div className="relative">
             <div
@@ -345,7 +341,7 @@ export default function Projects() {
                       min-w-[88%]
                       snap-start
                       overflow-hidden
-                      bg-[#111111]
+                      bg-[#2F6F6D]
                       sm:min-w-[78%]
                       lg:min-w-[74%]
                     "
@@ -374,14 +370,14 @@ export default function Projects() {
                             flex
                             items-center
                             gap-2
-                            bg-yellow-400
+                            bg-[#8FA68F]
                             px-3
                             py-2
                             text-[10px]
                             font-black
                             uppercase
                             tracking-widest
-                            text-black
+                            text-[#173331]
                           "
                       >
                         <Play size={11} fill="currentColor" />
@@ -408,7 +404,7 @@ export default function Projects() {
                             absolute
                             left-5
                             top-5
-                            bg-black
+                            bg-[#2F6F6D]
                             px-3
                             py-2
                             text-[10px]
@@ -424,12 +420,13 @@ export default function Projects() {
                   )}
 
                   {/* MEDIA NUMBER */}
+
                   <div
                     className="
                         absolute
                         bottom-4
                         right-4
-                        bg-black/80
+                        bg-[#173331]/80
                         px-3
                         py-2
                         text-xs
@@ -445,9 +442,13 @@ export default function Projects() {
               ))}
             </div>
 
-            {/* SLIDER CONTROLS */}
+            {/* =========================
+                SLIDER CONTROLS
+            ========================= */}
+
             <div className="mt-5 flex items-center justify-between">
               {/* DOTS */}
+
               <div className="flex items-center gap-2">
                 {currentProject.media.map((_, index) => (
                   <button
@@ -461,8 +462,8 @@ export default function Projects() {
                         transition-all
                         ${
                           activeMedia === index
-                            ? "w-8 bg-black"
-                            : "w-2 bg-black/20"
+                            ? "w-8 bg-[#2F6F6D]"
+                            : "w-2 bg-[#2F6F6D]/20"
                         }
                       `}
                   />
@@ -470,6 +471,7 @@ export default function Projects() {
               </div>
 
               {/* ARROWS */}
+
               <div className="flex gap-2">
                 <button
                   type="button"
@@ -483,9 +485,10 @@ export default function Projects() {
                     items-center
                     justify-center
                     border
-                    border-black/20
+                    border-[#2F6F6D]/20
+                    text-[#173331]
                     transition-all
-                    hover:bg-black
+                    hover:bg-[#2F6F6D]
                     hover:text-white
                     disabled:cursor-not-allowed
                     disabled:opacity-25
@@ -506,9 +509,10 @@ export default function Projects() {
                     items-center
                     justify-center
                     border
-                    border-black/20
+                    border-[#2F6F6D]/20
+                    text-[#173331]
                     transition-all
-                    hover:bg-yellow-400
+                    hover:bg-[#8FA68F]
                     disabled:cursor-not-allowed
                     disabled:opacity-25
                   "
@@ -519,21 +523,24 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* PROJECT INFORMATION */}
+          {/* =========================
+              PROJECT INFORMATION
+          ========================= */}
+
           <div
             className="
               mt-10
               grid
               gap-8
               border-t
-              border-black/15
+              border-[#2F6F6D]/15
               pt-6
               md:grid-cols-[1fr_auto]
               md:items-end
             "
           >
             <div>
-              <p className="section-label text-black/40">Project</p>
+              <p className="section-label text-[#173331]/40">Project</p>
 
               <h3
                 className="
@@ -541,6 +548,7 @@ export default function Projects() {
                   text-3xl
                   font-black
                   tracking-[-0.04em]
+                  text-[#173331]
                   sm:text-4xl
                   md:text-5xl
                 "
@@ -554,7 +562,7 @@ export default function Projects() {
                   text-sm
                   uppercase
                   tracking-[0.12em]
-                  text-black/50
+                  text-[#173331]/50
                 "
               >
                 {currentProject.type}
@@ -562,7 +570,7 @@ export default function Projects() {
             </div>
 
             <div className="flex items-center gap-3 md:text-right">
-              <MapPin size={18} className="text-yellow-500" />
+              <MapPin size={18} className="text-[#2F6F6D]" />
 
               <div>
                 <p
@@ -571,13 +579,15 @@ export default function Projects() {
                     font-black
                     uppercase
                     tracking-widest
-                    text-black/40
+                    text-[#173331]/40
                   "
                 >
                   Location
                 </p>
 
-                <p className="mt-1 font-bold">{currentProject.location}</p>
+                <p className="mt-1 font-bold text-[#173331]">
+                  {currentProject.location}
+                </p>
               </div>
             </div>
           </div>

@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #111111;
+  --ink: #173331;
   --paper: #f4f3ef;
-  --accent: #facc15;
-  --muted: #9b9b95;
+  --primary: #8fa68f;
+  --secondary: #2f6f6d;
+  --muted: #667b79;
+  --white: #ffffff;
 }
 
 * {
@@ -35,7 +37,7 @@ a {
 }
 
 ::selection {
-  background: var(--accent);
+  background: var(--primary);
   color: var(--ink);
 }
 
@@ -58,17 +60,15 @@ a {
 }
 
 .placeholder {
-  background: linear-gradient(135deg, #343434, #777 48%, #202020);
+  background: linear-gradient(135deg, #244b48 0%, #2f6f6d 45%, #8fa68f 100%);
 }
 
-/* Better keyboard accessibility */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--primary);
   outline-offset: 4px;
 }
 
-/* Desktop besar */
 @media (min-width: 1200px) {
   .display {
     font-size: clamp(4.5rem, 5.7vw, 7.8rem);
@@ -76,7 +76,6 @@ button:focus-visible {
   }
 }
 
-/* Tablet */
 @media (min-width: 768px) and (max-width: 1199px) {
   .display {
     font-size: clamp(3.2rem, 7vw, 6rem);
@@ -84,7 +83,6 @@ button:focus-visible {
   }
 }
 
-/* Mobile */
 @media (max-width: 767px) {
   .display {
     font-size: clamp(2rem, 8.5vw, 3.5rem);
@@ -93,7 +91,6 @@ button:focus-visible {
   }
 }
 
-/* Mobile kecil */
 @media (max-width: 390px) {
   .display {
     font-size: 2rem;

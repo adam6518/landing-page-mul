@@ -4,7 +4,7 @@ export default function ContactCTA() {
   return (
     <section
       id="contact"
-      className="bg-yellow-400 px-5 py-20 sm:px-6 sm:py-24 md:px-10 md:py-32 lg:py-36"
+      className="bg-[#8FA68F] px-5 py-20 text-[#173331] sm:px-6 sm:py-24 md:px-10 md:py-32 lg:py-36"
     >
       <div className="mx-auto max-w-[1600px]">
         <p className="section-label">03 — Mulai Kerja Sama dengan Kami</p>
@@ -14,7 +14,7 @@ export default function ContactCTA() {
           <span className="text-white">?</span>
         </h2>
 
-        <div className="mt-10 flex flex-col justify-between gap-8 border-t border-black/20 pt-6 md:mt-12 md:flex-row md:items-end">
+        <div className="mt-10 flex flex-col justify-between gap-8 border-t border-[#2F6F6D]/30 pt-6 md:mt-12 md:flex-row md:items-end">
           <p className="max-w-md text-base leading-relaxed sm:text-lg">
             Bagikan ide Anda dengan kami dan mari realisasikan bersama
           </p>
@@ -23,7 +23,7 @@ export default function ContactCTA() {
             href="https://wa.me/?text=Hello%20PT.%20Mitra%20Utama%20Lansekap%2C%20I%20would%20like%20to%20discuss%20a%20project."
             target="_blank"
             rel="noreferrer"
-            className="inline-flex w-full items-center justify-between gap-3 bg-black px-5 py-4 text-xs font-black uppercase text-white transition-colors hover:bg-white hover:text-black sm:w-fit sm:justify-center sm:px-6"
+            className="inline-flex w-full items-center justify-between gap-3 bg-[#2F6F6D] px-5 py-4 text-xs font-black uppercase text-white transition-colors hover:bg-white hover:text-[#173331] sm:w-fit sm:justify-center sm:px-6"
           >
             Hubungi Admin WhatsApp
             <MessageCircle size={17} />
