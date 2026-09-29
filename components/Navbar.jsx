@@ -4,9 +4,10 @@ import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const navigation = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "Tentang Kami", href: "#about" },
+  { label: "Produk & Layanan", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Kontak", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -26,7 +27,7 @@ export default function Navbar() {
           className="text-lg font-black tracking-tight sm:text-xl"
           aria-label="MUL homepage"
         >
-          MUL<span className="text-yellow-400">.</span>
+          PT. Mitra Utama Lansekap<span className="text-yellow-400">.</span>
         </a>
 
         {/* Desktop navigation */}
@@ -47,7 +48,7 @@ export default function Navbar() {
           href="#contact"
           className="hidden items-center gap-2 bg-yellow-400 px-4 py-3 text-[11px] font-black uppercase text-black transition-colors hover:bg-white lg:flex xl:px-5"
         >
-          Start a project
+          Mulai Project
           <ArrowUpRight size={15} />
         </a>
 

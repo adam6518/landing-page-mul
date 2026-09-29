@@ -7,16 +7,16 @@ export default function Hero() {
         {/* Hero content */}
         <div className="min-w-0">
           <p className="section-label mb-8 text-yellow-400">
-            Landscape construction · Jakarta, Indonesia
+            Konstruksi Landscape · Jakarta, Indonesia
           </p>
 
           <h1 className="display">
-            <span className="block">WE SHAPE</span>
+            <span className="block">PLAN</span>
 
-            <span className="block text-yellow-400">OUTDOOR</span>
+            <span className="block text-yellow-400">BUILD</span>
 
             <span className="block">
-              EXPERIENCES<span className="text-yellow-400">.</span>
+              PLANT<span className="text-yellow-400">.</span>
             </span>
           </h1>
 
@@ -25,13 +25,14 @@ export default function Hero() {
               href="#contact"
               className="inline-flex w-full items-center justify-between gap-3 bg-yellow-400 px-5 py-4 text-xs font-black uppercase text-black transition-colors hover:bg-white sm:w-fit sm:justify-center sm:px-6"
             >
-              Discuss your project
+              Diskusikan Project Anda
               <ArrowUpRight size={17} />
             </a>
 
             <p className="max-w-md text-sm leading-relaxed text-white/55 sm:max-w-xs">
-              A landscape construction partner focused on quality planting,
-              precise execution, and structured project management.
+              Partner konstruksi lansekap andalan yang berfokus menciptakan
+              ruang terbuka menjadi ruang yang nyaman untuk hidup dan
+              beraktivitas.
             </p>
           </div>
         </div>
