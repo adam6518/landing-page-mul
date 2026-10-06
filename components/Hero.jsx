@@ -10,19 +10,23 @@ export default function Hero() {
           </p>
 
           <h1 className="display">
-            <span className="block">COMPANY</span>
+            <span className="block">PLAN</span>
 
-            <span className="block text-[#8FA68F]">PROFILE</span>
+            <span className="block text-[#8FA68F]">BUILD</span>
+
+            <span className="block">
+              PLANT<span className="text-[#8FA68F]">.</span>
+            </span>
           </h1>
 
           <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-5">
-            <a
+            {/* <a
               href="#contact"
               className="inline-flex w-full items-center justify-between gap-3 bg-[#8FA68F] px-5 py-4 text-xs font-black uppercase text-[#173331] transition-colors hover:bg-white sm:w-fit sm:justify-center sm:px-6"
             >
               Diskusikan Project Anda
               <ArrowUpRight size={17} />
-            </a>
+            </a> */}
 
             <p className="max-w-md text-sm leading-relaxed text-white/75 sm:max-w-xs">
               Partner konstruksi lansekap andalan yang berfokus menciptakan

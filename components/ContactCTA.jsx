@@ -10,13 +10,13 @@ export default function ContactCTA() {
         <p className="section-label">03 — Mulai Kerja Sama dengan Kami</p>
 
         <h2 className="mt-6 max-w-5xl text-[clamp(3rem,8vw,8rem)] font-black leading-[0.9] tracking-[-0.07em]">
-          PUNYA IDE PROJECT
-          <span className="text-white">?</span>
+          CIPTAKAN RUANG TERBUKA ASRI DAN NYAMAN
+          <span className="text-white">.</span>
         </h2>
 
         <div className="mt-10 flex flex-col justify-between gap-8 border-t border-[#2F6F6D]/30 pt-6 md:mt-12 md:flex-row md:items-end">
           <p className="max-w-md text-base leading-relaxed sm:text-lg">
-            Bagikan ide Anda dengan kami dan mari realisasikan bersama
+            Diskusikan Kebutuhan Lansekap Anda dengan Kami
           </p>
 
           <a
@@ -25,7 +25,7 @@ export default function ContactCTA() {
             rel="noreferrer"
             className="inline-flex w-full items-center justify-between gap-3 bg-[#2F6F6D] px-5 py-4 text-xs font-black uppercase text-white transition-colors hover:bg-white hover:text-[#173331] sm:w-fit sm:justify-center sm:px-6"
           >
-            Hubungi Admin WhatsApp
+            Contact Us
             <MessageCircle size={17} />
             <ArrowUpRight size={17} />
           </a>
