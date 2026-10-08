@@ -1,120 +1,364 @@
 "use client";
 
-import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const services = [
   {
+    number: "01",
     title: "Konstruksi Softscape",
     description:
-      "Pembuatan taman dengan pohon dan tanaman pilihan yang sesuai dengan karakter area untuk menciptakan ruang outdoor yang nyaman dan asri",
+      "Pembuatan taman dengan pohon dan tanaman pilihan yang sesuai dengan karakter area untuk menciptakan ruang outdoor yang nyaman dan asri.",
+    image: "/images/orang nanam.jpeg",
+    imageAlt:
+      "Pekerja melakukan penanaman tanaman pada proyek landscape PT. Mitra Utama Lansekap",
   },
   {
-    title: "Konstruksi Hardscape",
-    description:
-      "Pengerjaan elemen keras landscape seperti steger, batu, dan elemen pendukung area luar ruang.",
-  },
-  {
+    number: "02",
     title: "Landscape Maintenance",
     description:
-      "Layanan perawatan taman yang dilakukan secara berkala untuk menjaga kesehatan tanaman dan menjaga tanaman tetap rapi dan terawat",
+      "Layanan perawatan taman yang dilakukan secara berkala untuk menjaga kesehatan tanaman dan menjaga tanaman tetap rapi dan terawat.",
+    image: "/images/orang nyiram.jpeg",
+    imageAlt:
+      "Pekerja melakukan penyiraman tanaman pada proyek landscape PT. Mitra Utama Lansekap",
   },
 ];
 
 export default function Services() {
-  const [activeService, setActiveService] = useState(null);
-
-  const handleToggle = (index) => {
-    setActiveService((current) => (current === index ? null : index));
-  };
-
   return (
     <section
       id="services"
-      className="overflow-hidden bg-[#2F6F6D] px-5 py-24 text-white sm:px-6 md:px-10 md:py-36"
+      className="
+        overflow-hidden
+        bg-[#2F6F6D]
+        px-5
+        py-24
+        text-white
+        sm:px-6
+        md:px-10
+        md:py-36
+      "
     >
       <div className="mx-auto max-w-[1600px]">
-        <div className="mb-14 flex flex-col justify-between gap-8 md:mb-16 lg:flex-row lg:items-end">
+        {/* =========================================================
+            SECTION HEADER
+        ========================================================= */}
+
+        <div
+          className="
+            mb-16
+            flex
+            flex-col
+            justify-between
+            gap-8
+            lg:mb-20
+            lg:flex-row
+            lg:items-end
+          "
+        >
           <div>
             <p className="section-label text-[#8FA68F]">02 — Keahlian kami</p>
 
-            <h2 className="mt-5 max-w-4xl text-[clamp(3.5rem,8vw,8rem)] font-black leading-[0.85] tracking-[-0.07em]">
+            <h2
+              className="
+                mt-5
+                max-w-4xl
+                text-[clamp(3.5rem,8vw,8rem)]
+                font-black
+                leading-[0.85]
+                tracking-[-0.07em]
+              "
+            >
               Produk &
               <br />
               <span className="text-[#8FA68F]">Layanan.</span>
             </h2>
           </div>
 
-          <span className="text-xs uppercase tracking-wider text-[#8FA68F]">
-            05 Services
-          </span>
+          <div className="lg:pb-2">
+            <span
+              className="
+                text-xs
+                font-bold
+                uppercase
+                tracking-[0.18em]
+                text-[#8FA68F]
+              "
+            >
+              02 Services
+            </span>
+          </div>
         </div>
 
-        <div className="border-t border-white/20">
-          {services.map((service, index) => {
-            const isActive = activeService === index;
+        {/* =========================================================
+            SERVICES
+        ========================================================= */}
 
-            return (
+        <div className="border-t border-white/20">
+          {services.map((service) => (
+            <article
+              key={service.title}
+              className="
+                group
+                border-b
+                border-white/20
+                py-10
+                md:py-14
+                lg:py-20
+              "
+            >
               <div
-                key={service.title}
-                className={`group border-b border-white/20 transition-colors duration-300 ${
-                  isActive
-                    ? "bg-[#8FA68F] text-[#173331]"
-                    : "bg-transparent text-white"
-                }`}
-                onMouseEnter={() => setActiveService(index)}
-                onMouseLeave={() => {
-                  if (window.matchMedia("(min-width: 768px)").matches) {
-                    setActiveService(null);
-                  }
-                }}
+                className="
+                  grid
+                  gap-10
+                  lg:grid-cols-[0.85fr_1.15fr]
+                  lg:items-center
+                  lg:gap-20
+                  xl:grid-cols-[0.8fr_1.2fr]
+                "
               >
-                <button
-                  type="button"
-                  onClick={() => handleToggle(index)}
-                  className="flex w-full items-center justify-between gap-5 py-7 text-left md:py-8"
-                >
-                  <div className="flex min-w-0 items-center gap-5 md:gap-8">
+                {/* =================================================
+                    CONTENT
+                ================================================= */}
+
+                <div className="min-w-0">
+                  {/* NUMBER */}
+
+                  <div className="mb-6 flex items-center gap-4">
                     <span
-                      className={`shrink-0 text-xs transition-colors ${
-                        isActive ? "text-[#2F6F6D]/70" : "text-white/45"
-                      }`}
+                      className="
+                        text-xs
+                        font-bold
+                        tracking-[0.18em]
+                        text-[#8FA68F]
+                      "
                     >
-                      {String(index + 1).padStart(2, "0")}
+                      {service.number}
                     </span>
 
-                    <h3 className="min-w-0 text-[clamp(1.45rem,3.5vw,3.5rem)] font-bold leading-tight tracking-[-0.035em]">
-                      {service.title}
-                    </h3>
+                    <span
+                      className="
+                        h-px
+                        w-10
+                        bg-[#8FA68F]/50
+                      "
+                    />
+
+                    <span
+                      className="
+                        text-[10px]
+                        font-bold
+                        uppercase
+                        tracking-[0.18em]
+                        text-white/40
+                      "
+                    >
+                      Service
+                    </span>
                   </div>
 
-                  <span
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center transition-transform duration-300 md:h-12 md:w-12 ${
-                      isActive ? "rotate-45" : "rotate-0"
-                    }`}
+                  {/* TITLE */}
+
+                  <h3
+                    className="
+                      max-w-3xl
+                      text-[clamp(2.2rem,5vw,5.5rem)]
+                      font-black
+                      leading-[0.9]
+                      tracking-[-0.055em]
+                      text-white
+                      transition-colors
+                      duration-300
+                      group-hover:text-[#8FA68F]
+                    "
                   >
-                    <ArrowUpRight size={22} strokeWidth={1.8} />
-                  </span>
-                </button>
+                    {service.title}
+                  </h3>
+
+                  {/* DESCRIPTION */}
+
+                  <p
+                    className="
+                      mt-7
+                      max-w-xl
+                      text-sm
+                      leading-relaxed
+                      text-white/65
+                      md:text-base
+                    "
+                  >
+                    {service.description}
+                  </p>
+
+                  {/* CTA */}
+
+                  <a
+                    href="#contact"
+                    className="
+                      mt-8
+                      inline-flex
+                      items-center
+                      gap-3
+                      text-xs
+                      font-black
+                      uppercase
+                      tracking-[0.12em]
+                      text-[#8FA68F]
+                      transition-colors
+                      hover:text-white
+                    "
+                  >
+                    Discuss this service
+                    <span
+                      className="
+                        flex
+                        h-9
+                        w-9
+                        items-center
+                        justify-center
+                        border
+                        border-[#8FA68F]/40
+                        transition-all
+                        duration-300
+                        group-hover:border-[#8FA68F]
+                        group-hover:bg-[#8FA68F]
+                        group-hover:text-[#173331]
+                      "
+                    >
+                      <ArrowUpRight
+                        size={16}
+                        className="
+                          transition-transform
+                          duration-300
+                          group-hover:rotate-45
+                        "
+                      />
+                    </span>
+                  </a>
+                </div>
+
+                {/* =================================================
+                    IMAGE
+                ================================================= */}
 
                 <div
-                  className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
-                    isActive
-                      ? "grid-rows-[1fr] opacity-100"
-                      : "grid-rows-[0fr] opacity-0"
-                  }`}
+                  className="
+                    relative
+                    flex
+                    w-full
+                    items-center
+                    justify-center
+                    bg-[#173331]
+                    p-2
+                    sm:p-3
+                    lg:p-4
+                  "
                 >
-                  <div className="overflow-hidden">
-                    <div className="pb-7 pl-[2.25rem] pr-8 md:pb-9 md:pl-[4.25rem] md:pr-20">
-                      <p className="max-w-2xl text-sm leading-relaxed text-current opacity-75 md:text-base">
-                        {service.description}
-                      </p>
+                  {/* IMAGE FRAME */}
+
+                  <div className="relative w-full overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.imageAlt}
+                      loading="lazy"
+                      draggable="false"
+                      className="
+                        block
+                        h-auto
+                        max-h-[720px]
+                        w-full
+                        object-contain
+                        transition-transform
+                        duration-700
+                        ease-out
+                        group-hover:scale-[1.02]
+                      "
+                    />
+
+                    {/* IMAGE OVERLAY */}
+
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        inset-0
+                        bg-[#173331]/10
+                        transition-colors
+                        duration-500
+                        group-hover:bg-transparent
+                      "
+                    />
+
+                    {/* IMAGE LABEL */}
+
+                    <div
+                      className="
+                        absolute
+                        bottom-4
+                        left-4
+                        flex
+                        items-center
+                        gap-3
+                        bg-[#173331]/85
+                        px-3
+                        py-2
+                        backdrop-blur-sm
+                        sm:bottom-5
+                        sm:left-5
+                      "
+                    >
+                      <span
+                        className="
+                          h-1.5
+                          w-1.5
+                          shrink-0
+                          rounded-full
+                          bg-[#8FA68F]
+                        "
+                      />
+
+                      <span
+                        className="
+                          text-[9px]
+                          font-bold
+                          uppercase
+                          tracking-[0.16em]
+                          text-white
+                        "
+                      >
+                        {service.title}
+                      </span>
+                    </div>
+
+                    {/* CORNER NUMBER */}
+
+                    <div
+                      className="
+                        absolute
+                        right-4
+                        top-4
+                        flex
+                        h-10
+                        w-10
+                        items-center
+                        justify-center
+                        border
+                        border-white/30
+                        bg-[#2F6F6D]/80
+                        text-xs
+                        font-bold
+                        text-white
+                        backdrop-blur-sm
+                        sm:right-5
+                        sm:top-5
+                      "
+                    >
+                      {service.number}
                     </div>
                   </div>
                 </div>
               </div>
-            );
-          })}
+            </article>
+          ))}
         </div>
       </div>
     </section>
