@@ -8,7 +8,7 @@ const services = [
     title: "Konstruksi Softscape",
     description:
       "Pembuatan taman dengan pohon dan tanaman pilihan yang sesuai dengan karakter area untuk menciptakan ruang outdoor yang nyaman dan asri.",
-    image: "/images/orang nanam.jpeg",
+    image: "/images/orang nanam.png",
     imageAlt:
       "Pekerja melakukan penanaman tanaman pada proyek landscape PT. Mitra Utama Lansekap",
   },
@@ -17,7 +17,7 @@ const services = [
     title: "Landscape Maintenance",
     description:
       "Layanan perawatan taman yang dilakukan secara berkala untuk menjaga kesehatan tanaman dan menjaga tanaman tetap rapi dan terawat.",
-    image: "/images/orang nyiram.jpeg",
+    image: "/images/orang nyiram.png",
     imageAlt:
       "Pekerja melakukan penyiraman tanaman pada proyek landscape PT. Mitra Utama Lansekap",
   },
@@ -207,7 +207,7 @@ export default function Services() {
                       hover:text-white
                     "
                   >
-                    Discuss this service
+                    Dikusikan dengan Kami
                     <span
                       className="
                         flex
