@@ -257,17 +257,6 @@ const projects = [
 
       [
         {
-          src: "/images/kelapa-gading/WhatsApp Image 2024-11-21 at 09.51.11.jpeg",
-          alt: "Landscape Project Sedayu City",
-        },
-        {
-          src: "/images/kelapa-gading/WhatsApp Image 2025-01-20 at 13.00.38 (2).jpeg",
-          alt: "Landscape Project Sedayu City",
-        },
-      ],
-
-      [
-        {
           src: "/images/kelapa-gading/WhatsApp Image 2025-01-20 at 13.00.38.jpeg",
           alt: "Landscape Project Sedayu City",
         },
@@ -287,10 +276,6 @@ const projects = [
       [
         {
           src: "/images/kelapa-gading/CAM_PO_12_22_00028.jpg",
-          alt: "Landscape Project Sedayu City",
-        },
-        {
-          src: "/images/kelapa-gading/WhatsApp Image 2024-11-21 at 09.51.11.jpeg",
           alt: "Landscape Project Sedayu City",
         },
       ],

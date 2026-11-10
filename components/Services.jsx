@@ -8,7 +8,7 @@ const services = [
     title: "Konstruksi Softscape",
     description:
       "Pembuatan taman dengan pohon dan tanaman pilihan yang sesuai dengan karakter area untuk menciptakan ruang outdoor yang nyaman dan asri.",
-    image: "/images/orang nanam.png",
+    image: "/images/orang nyiram 2.png",
     imageAlt:
       "Pekerja melakukan penanaman tanaman pada proyek landscape PT. Mitra Utama Lansekap",
   },

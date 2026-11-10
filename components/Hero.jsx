@@ -64,7 +64,7 @@ export default function Hero() {
                 text-sm
                 leading-relaxed
                 text-white/75
-                sm:max-w-xs
+                md:max-w-md
               "
             >
               Partner konstruksi lansekap andalan yang berfokus menciptakan
